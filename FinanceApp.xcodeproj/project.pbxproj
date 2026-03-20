@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		812756C92F6BAD7900F1D417 /* FinanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		812756DD2F6CD20900F1D417 /* FinanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FinanceApp.app; path = "/Users/derricksanchez/Code/Projects/FinanceApp/build/Debug-iphoneos/FinanceApp.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,16 +33,7 @@
 			isa = PBXGroup;
 			children = (
 				812756CB2F6BAD7900F1D417 /* FinanceApp */,
-				812756CA2F6BAD7900F1D417 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		812756CA2F6BAD7900F1D417 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				812756C92F6BAD7900F1D417 /* FinanceApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -67,7 +58,7 @@
 			packageProductDependencies = (
 			);
 			productName = FinanceApp;
-			productReference = 812756C92F6BAD7900F1D417 /* FinanceApp.app */;
+			productReference = 812756DD2F6CD20900F1D417 /* FinanceApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -95,7 +86,7 @@
 			mainGroup = 812756C02F6BAD7900F1D417;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 812756CA2F6BAD7900F1D417 /* Products */;
+			productRefGroup = 812756C02F6BAD7900F1D417;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (

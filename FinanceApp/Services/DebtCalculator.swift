@@ -26,7 +26,7 @@ struct PaymentScheduleResult {
 }
 
 struct DebtCalculator {
-    func calculatorAvalanche(debts: [Debt], extraPayment: Double) -> PaymentScheduleResult {
+    func calculateAvalanche(debts: [Debt], extraPayment: Double) -> PaymentScheduleResult {
         let sorted = debts.sorted { $0.interestRate > $1.interestRate }
         return simulatePayments(debts: sorted, extraPayment: extraPayment)
     }
@@ -63,7 +63,7 @@ struct DebtCalculator {
                     payments.append(PaymentEntry(debtId: working[i].id, amount: 0, remainingBalance: 0))
                     continue
                 }
-                var payment = working[i].minimumPayment + remainingExtra
+                let payment = working[i].minimumPayment + remainingExtra
                 remainingExtra = 0
                 let actual = min(payment, working[i].balance)
                 if payment > actual { remainingExtra += payment - actual }

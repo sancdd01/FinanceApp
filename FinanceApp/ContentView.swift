@@ -10,7 +10,16 @@ import SwiftData
 
 struct ContentView: View {
     var body: some View {
-        DebtCalculatorView()
+        TabView {
+            DebtCalculatorView()
+                .tabItem {
+                    Label("Debts", systemImage: "creditcard")
+                }
+            BillOrganizerView()
+                .tabItem {
+                    Label("Bills", systemImage: "list.bullet.rectangle")
+                }
+        }
     }
 }
 

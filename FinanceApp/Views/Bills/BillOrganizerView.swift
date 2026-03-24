@@ -69,16 +69,13 @@ struct BillOrganizerView: View {
                     ScrollView {
                         LazyVStack(spacing: 12) {
                             ForEach(billsForSelectedDay) { bill in
-                                Text(bill.name) // placeholder - replaced in Task 5
-                                    .padding()
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                    .background(.white)
-                                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                                    .shadow(color: .black.opacity(0.06), radius: 4, y: 2)
+                                BillCardView(bill: bill)
+                                    .transition(.move(edge: .bottom).combined(with: .opacity))
                             }
                         }
                         .padding()
                     }
+                    .animation(.spring(duration: 0.3), value: selectedDay)
                 }
             }
             .navigationTitle("Bills")

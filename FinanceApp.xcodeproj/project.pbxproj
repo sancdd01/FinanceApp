@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		81A013422FA197B700A9A7CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 812756C12F6BAD7900F1D417 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 812756C82F6BAD7900F1D417;
+			remoteInfo = FinanceApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		818913E62F7094E0001A220B /* FinanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A0133E2FA197B700A9A7CA /* FinanceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinanceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = FinanceApp;
 			sourceTree = "<group>";
 		};
+		81A0133F2FA197B700A9A7CA /* FinanceAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FinanceAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		812756C62F6BAD7900F1D417 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A0133B2FA197B700A9A7CA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -34,6 +57,8 @@
 			children = (
 				812756CB2F6BAD7900F1D417 /* FinanceApp */,
 				818913E62F7094E0001A220B /* FinanceApp.app */,
+				81A0133E2FA197B700A9A7CA /* FinanceAppTests.xctest */,
+				81A0133F2FA197B700A9A7CA /* FinanceAppTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +87,29 @@
 			productReference = 818913E62F7094E0001A220B /* FinanceApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		81A0133D2FA197B700A9A7CA /* FinanceAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81A013462FA197B700A9A7CA /* Build configuration list for PBXNativeTarget "FinanceAppTests" */;
+			buildPhases = (
+				81A0133A2FA197B700A9A7CA /* Sources */,
+				81A0133B2FA197B700A9A7CA /* Frameworks */,
+				81A0133C2FA197B700A9A7CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81A013432FA197B700A9A7CA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				81A0133F2FA197B700A9A7CA /* FinanceAppTests */,
+			);
+			name = FinanceAppTests;
+			packageProductDependencies = (
+			);
+			productName = FinanceAppTests;
+			productReference = 81A0133E2FA197B700A9A7CA /* FinanceAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -74,6 +122,10 @@
 				TargetAttributes = {
 					812756C82F6BAD7900F1D417 = {
 						CreatedOnToolsVersion = 26.3;
+					};
+					81A0133D2FA197B700A9A7CA = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 812756C82F6BAD7900F1D417;
 					};
 				};
 			};
@@ -92,12 +144,20 @@
 			projectRoot = "";
 			targets = (
 				812756C82F6BAD7900F1D417 /* FinanceApp */,
+				81A0133D2FA197B700A9A7CA /* FinanceAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		812756C72F6BAD7900F1D417 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A0133C2FA197B700A9A7CA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -114,7 +174,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		81A0133A2FA197B700A9A7CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		81A013432FA197B700A9A7CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 812756C82F6BAD7900F1D417 /* FinanceApp */;
+			targetProxy = 81A013422FA197B700A9A7CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		812756D42F6BAD7B00F1D417 /* Debug */ = {
@@ -298,6 +373,46 @@
 			};
 			name = Release;
 		};
+		81A013442FA197B700A9A7CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.derricksanchez.FinanceAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FinanceApp";
+			};
+			name = Debug;
+		};
+		81A013452FA197B700A9A7CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.derricksanchez.FinanceAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinanceApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FinanceApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -315,6 +430,15 @@
 			buildConfigurations = (
 				812756D72F6BAD7B00F1D417 /* Debug */,
 				812756D82F6BAD7B00F1D417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81A013462FA197B700A9A7CA /* Build configuration list for PBXNativeTarget "FinanceAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81A013442FA197B700A9A7CA /* Debug */,
+				81A013452FA197B700A9A7CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

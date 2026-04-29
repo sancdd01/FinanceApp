@@ -13,6 +13,7 @@ struct BillOrganizerView: View {
     
     @State private var selectedMonth: Date = Date()
     @State private var selectedDay: Int = Calendar.current.component(.day, from: Date())
+    @State private var showingAddBill = false
     
     private var selectedDateLabel: String {
         var components = Calendar.current.dateComponents([.year, .month], from: selectedMonth)
@@ -80,6 +81,16 @@ struct BillOrganizerView: View {
             }
             .navigationTitle("Bills")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button { showingAddBill = true } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $showingAddBill) {
+                AddBillView()
+            }
         }
     }
 }
